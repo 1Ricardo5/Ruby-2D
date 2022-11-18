@@ -7,6 +7,9 @@ public class RubyController : MonoBehaviour
     public int maxHealth = 5;
     int currentHealth;
     
+    public int health { get { return currentHealth; }}
+    int currentHealth 
+    
     Rigidbody2D rigidbody2d;
     float horizontal;
     float vertical;
@@ -16,7 +19,7 @@ public class RubyController : MonoBehaviour
     void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
-    
+        
         currentHealth = maxHealth;
     }
 
@@ -43,4 +46,20 @@ public class RubyController : MonoBehaviour
     }
 
 }
+     using System.Collections;
+     using System.Collections.Generic;
+     using UnityEngine;
 
+     public class HealthCollectible : MonoBehaviour
+     {
+      void OnTriggerEnter2D(Collider2D other)
+      {
+        RubyController controller = other.GetComponent<RubyController>();
+
+        if (controller.health  < controller.maxHealth)
+        {
+          controller.ChangeHealth(1);
+          Destroy(gameObject);
+        }
+      }
+     }
