@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyController2 : MonoBehaviour
+public class EnemyController : MonoBehaviour
 {
     public float speed = 3.0f;
     public bool vertical;
@@ -46,5 +46,15 @@ public class EnemyController2 : MonoBehaviour
         }
     
         rigidbody2D.MovePosition(position);
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        RubyController player = other.gameObject.GetComponent<RubyController >();
+
+        if (player != null)
+        {
+            player.ChangeHealth(-1);
+        }
     }
 }
