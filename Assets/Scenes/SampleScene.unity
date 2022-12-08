@@ -942,7 +942,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9070322005374255433, guid: 0f9cb18f16e024a85890010707b9d287, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.630893
+      value: -8.78
       objectReference: {fileID: 0}
     - target: {fileID: 9070322005374255433, guid: 0f9cb18f16e024a85890010707b9d287, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5538,11 +5538,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4836239128723257601, guid: 08f7dcd36f59046138bc370247f1898b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.953293
+      value: -16.73
       objectReference: {fileID: 0}
     - target: {fileID: 4836239128723257601, guid: 08f7dcd36f59046138bc370247f1898b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.184415
+      value: -8.36
       objectReference: {fileID: 0}
     - target: {fileID: 4836239128723257601, guid: 08f7dcd36f59046138bc370247f1898b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6948,7 +6948,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 601586326}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.17, y: -0.46, z: 0}
+  m_LocalPosition: {x: 0.21, y: -0.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1043278537}
@@ -82497,6 +82497,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f9cb18f16e024a85890010707b9d287, type: 3}
+--- !u!1 &1889861813 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4735119953172309422, guid: 45ec8ef072018466e81174da99768761, type: 3}
+  m_PrefabInstance: {fileID: 4735119952229989438}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1889861818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889861813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6da071f1dd33c4d20a72c518603792c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  vertical: 0
+  changeTime: 3
 --- !u!1001 &1892524204
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -85869,6 +85889,10 @@ PrefabInstance:
     - target: {fileID: 8033698762288233251, guid: 2792173b00e0e4cdead2b7f7b9b8932c, type: 3}
       propertyPath: m_Constraints
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8033698762288233251, guid: 2792173b00e0e4cdead2b7f7b9b8932c, type: 3}
+      propertyPath: m_GravityScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8033698762288233251, guid: 2792173b00e0e4cdead2b7f7b9b8932c, type: 3}
       propertyPath: m_SleepingMode
