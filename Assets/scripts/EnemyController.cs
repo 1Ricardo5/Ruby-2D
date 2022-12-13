@@ -38,11 +38,11 @@ public class EnemyController : MonoBehaviour
         
         if (vertical)
         {
-            position.y = position.y + Time.deltaTime * speed;
+            position.y = position.y + Time.deltaTime * speed * direction;
         }
         else
         {
-          position.x = position.x + Time.deltaTime * speed;
+          position.x = position.x + Time.deltaTime * speed * direction;
         }
     
         rigidbody2D.MovePosition(position);
