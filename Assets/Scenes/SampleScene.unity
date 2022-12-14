@@ -85900,7 +85900,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8033698762288233251, guid: 2792173b00e0e4cdead2b7f7b9b8932c, type: 3}
       propertyPath: m_GravityScale
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8033698762288233251, guid: 2792173b00e0e4cdead2b7f7b9b8932c, type: 3}
       propertyPath: m_SleepingMode
