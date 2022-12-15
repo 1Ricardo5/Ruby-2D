@@ -12,7 +12,8 @@ public class EnemyController : MonoBehaviour
     float timer;
     int direction = 1;
    
-     Animator animator
+   
+     Animator animator;
     
     // Start is called before the first frame update
     void Start()
