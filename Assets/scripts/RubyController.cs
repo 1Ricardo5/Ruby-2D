@@ -52,20 +52,18 @@ public class RubyController : MonoBehaviour
         animator.SetFloat("Look Y", lookDirection.y);
         animator.SetFloat("Speed", move.magnitude);
         
-         if (isInvincible)
+        if (isInvincible)
         {
             invincibleTimer -= Time.deltaTime;
             if (invincibleTimer < 0)
             {
                 isInvincible = false;
             }
-                
-          if(Input.GetKeyDown(KeyCode.C))
+        }
+
+        if(Input.GetKeyDown(KeyCode.C))
         {
             Launch();
-        }
-           
-        
         }
 
     }
