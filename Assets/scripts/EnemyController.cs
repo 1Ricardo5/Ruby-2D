@@ -16,6 +16,8 @@ public class EnemyController : MonoBehaviour
      Animator animator;
 
      public ParticleSystem smokeEffect;
+
+     private GameObject player;
     
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,7 @@ public class EnemyController : MonoBehaviour
         rigidbody2D = GetComponent<Rigidbody2D>();
         timer = changeTime;
         animator = GetComponent<Animator>();
+        player = GameObject.Find("ruby");
     }
 
 
@@ -42,6 +45,8 @@ public class EnemyController : MonoBehaviour
             timer = changeTime;
         }
 
+        Vector2 lookDirection = (player.transform.position - transform.position).normalized;
+        rigidbody2D.AddForce(lookDirection * speed);
 
     }
 
@@ -55,22 +60,22 @@ public class EnemyController : MonoBehaviour
        }
        
        
-        Vector2 position = rigidbody2D.position;
+        // Vector2 position = rigidbody2D.position;
         
-        if (vertical)
-        {
-          position.y = position.y + Time.deltaTime * speed * direction;
-          animator.SetFloat("Move X", 0);
-            animator.SetFloat("Move Y", direction);
-        }
-        else
-        {
-          position.x = position.x + Time.deltaTime * speed * direction;
-          animator.SetFloat("Move X", direction);
-            animator.SetFloat("Move Y", 0);
-        }
+        // if (vertical)
+        // {
+        //   position.y = position.y + Time.deltaTime * speed * direction;
+        //   animator.SetFloat("Move X", 0);
+        //     animator.SetFloat("Move Y", direction);
+        // }
+        // else
+        // {
+        //   position.x = position.x + Time.deltaTime * speed * direction;
+        //   animator.SetFloat("Move X", direction);
+        //     animator.SetFloat("Move Y", 0);
+        // }
     
-        rigidbody2D.MovePosition(position);
+        // rigidbody2D.MovePosition(position);
     }
 
     void OnCollisionEnter2D(Collision2D other)
