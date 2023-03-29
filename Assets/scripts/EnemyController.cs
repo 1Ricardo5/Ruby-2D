@@ -18,6 +18,8 @@ public class EnemyController : MonoBehaviour
      public ParticleSystem smokeEffect;
 
      private GameObject player;
+
+     bool playerInSight;
     
     // Start is called before the first frame update
     void Start()
@@ -45,8 +47,9 @@ public class EnemyController : MonoBehaviour
             timer = changeTime;
         }
 
-        Vector2 lookDirection = (player.transform.position - transform.position).normalized;
-        rigidbody2D.AddForce(lookDirection * speed);
+        
+
+        
 
     }
 
@@ -58,24 +61,34 @@ public class EnemyController : MonoBehaviour
        {
           return;
        }
-       
-       
-        // Vector2 position = rigidbody2D.position;
+
+       if(playerInSight == true)
+        {
+            Vector2 lookDirection = (player.transform.position - transform.position).normalized;
+            rigidbody2D.AddForce(lookDirection * speed);
+        }else
+        {
+            Vector2 position = rigidbody2D.position;
         
-        // if (vertical)
-        // {
-        //   position.y = position.y + Time.deltaTime * speed * direction;
-        //   animator.SetFloat("Move X", 0);
-        //     animator.SetFloat("Move Y", direction);
-        // }
-        // else
-        // {
-        //   position.x = position.x + Time.deltaTime * speed * direction;
-        //   animator.SetFloat("Move X", direction);
-        //     animator.SetFloat("Move Y", 0);
-        // }
-    
-        // rigidbody2D.MovePosition(position);
+            if (vertical)
+            {
+            position.y = position.y + Time.deltaTime * speed * direction;
+            animator.SetFloat("Move X", 0);
+                animator.SetFloat("Move Y", direction);
+            }
+            else
+            {
+            position.x = position.x + Time.deltaTime * speed * direction;
+            animator.SetFloat("Move X", direction);
+                animator.SetFloat("Move Y", 0);
+            }
+        
+            rigidbody2D.MovePosition(position);
+
+        }
+       
+       
+        
     }
 
     void OnCollisionEnter2D(Collision2D other)
@@ -88,12 +101,27 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-       public void Fix()
-       {
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.CompareTag("Player"))
+        {
+            playerInSight = true;
+        }
+    }
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if(other.gameObject.CompareTag("Player"))
+        {
+            playerInSight = false;
+        }
+    }
+
+    public void Fix()
+    {
         broken = false;
         rigidbody2D.simulated = false;
         animator.SetTrigger("Fixed");
-       }
+    }
 
 }
 
