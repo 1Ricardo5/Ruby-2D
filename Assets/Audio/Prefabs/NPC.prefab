@@ -32,11 +32,11 @@ RectTransform:
   m_Children:
   - {fileID: 1645414694}
   m_Father: {fileID: 7287260233994464900}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.35900116, y: 2.625}
+  m_AnchoredPosition: {x: 0.39, y: 2.46}
   m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &455993492
@@ -100,6 +100,101 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!1 &880263021
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 880263022}
+  - component: {fileID: 880263023}
+  - component: {fileID: 4834436343566955378}
+  m_Layer: 10
+  m_Name: Dialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &880263022
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880263021}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7287260233994464900}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &880263023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880263021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eacc51cde63649b8895a726d40b4c63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 1661474664}
+  lines:
+  - (joe) we have come to take you down
+  - (ruby) ...
+  - (Evil Robot) we are the new world
+  - (Evil Robot) you guys are just a bunch of fossils
+  - (Evil Robot) lost in time
+  - (joe) you think taking over the nation will solve that
+  - "(ruby) \u2026hm"
+  - (joe) you must be a fool
+  - (Evil Robot) silence, you know nothing
+  - (Evil Robot) that is but a fraction of my goals
+  - "(joe) it can\u2019t be good if it costs hundreds of lives"
+  - "(ruby) \u2026hmh"
+  - (Evil Robot) I hate people like you
+  - (Evil Robot) they think they know everything
+  - (Evil Robot) trying to be the hero to every story
+  - (Evil Robot) but in the end you are just incompetent idiots
+  - (ruby) HMMH
+  - "(joe) yeah,that doesn\u2019t matter because your pure evil"
+  - (ruby) hmmmh
+  - (Evil Robot) okay is that so
+  - (Evil Robot) come and see what happens
+  textSpeed: 0.05
+  dialogBox: {fileID: 455993489}
+--- !u!61 &4834436343566955378
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880263021}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.25822532, y: 0.20463467}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.5164499, y: 1.4092689}
+  m_EdgeRadius: 0
 --- !u!1 &1645414693
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,7 +417,6 @@ GameObject:
   - component: {fileID: 7287260233994464903}
   - component: {fileID: 7287260233994464902}
   - component: {fileID: 7287260233994464901}
-  - component: {fileID: 347199159}
   m_Layer: 10
   m_Name: NPC
   m_TagString: Untagged
@@ -339,8 +433,9 @@ Transform:
   m_GameObject: {fileID: 7287260233994464953}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -15.437732, y: 6.8584685, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1328691, y: 1.166477, z: 1}
   m_Children:
+  - {fileID: 880263022}
   - {fileID: 455993493}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -387,7 +482,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 255841382d607e24a8317d9ab167f414, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1.7066667, y: 1.7066667}
@@ -422,13 +517,13 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7287260233994464953}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.45173448, y: -0.12791729}
+  m_Offset: {x: 0.38305914, y: 0.413976}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -439,19 +534,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.80319774, y: 0.48608685}
+  m_Size: {x: 1.5540843, y: 1.0428776}
   m_EdgeRadius: 0
---- !u!114 &347199159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7287260233994464953}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dbd0880f0b874d59b4239c5591e775b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  displayTime: 4
-  dialogBox: {fileID: 455993489}
