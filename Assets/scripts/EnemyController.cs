@@ -19,7 +19,9 @@ public class EnemyController : MonoBehaviour
 
      private GameObject player;
 
-     bool playerInSight;
+     public bool playerInSight;
+
+     public bool chaseplayer;
     
     // Start is called before the first frame update
     void Start()
@@ -62,7 +64,7 @@ public class EnemyController : MonoBehaviour
           return;
        }
 
-       if(playerInSight == true)
+       if(playerInSight == true && chaseplayer == true)
         {
             Vector2 lookDirection = (player.transform.position - transform.position).normalized;
             rigidbody2D.AddForce(lookDirection * speed);

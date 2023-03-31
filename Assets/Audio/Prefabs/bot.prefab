@@ -267,6 +267,8 @@ MonoBehaviour:
   vertical: 0
   changeTime: 3
   smokeEffect: {fileID: 2180381957748370761}
+  playerInSight: 0
+  chaseplayer: 0
 --- !u!58 &8063485232747550094
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -280,9 +282,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.013731869, y: 0}
+  m_Offset: {x: 39.958862, y: 39.94175}
   serializedVersion: 2
-  m_Radius: 4.699283
+  m_Radius: 30.996002
 --- !u!1001 &4735119952317462969
 PrefabInstance:
   m_ObjectHideFlags: 0

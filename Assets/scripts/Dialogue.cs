@@ -14,12 +14,15 @@ public class Dialogue : MonoBehaviour
     
 
     private int index;
+
+    EnemyController[] enemy;
     // Start is called before the first frame update
     void Start()
     {
         textComponent.text= string.Empty;
         
         StartDialogue();
+        enemy = FindObjectsOfType<EnemyController>();
 
     }
 
@@ -32,7 +35,6 @@ public class Dialogue : MonoBehaviour
             dialogBox.gameObject.SetActive(true);
             if (textComponent.text == lines[index])
             { 
-               
                 NextLine();
             }
             else
@@ -68,7 +70,13 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
+            
             gameObject.SetActive(false);
+            for(int i = 0; i < enemy.Length; i++)
+            {
+                enemy[i].chaseplayer = true;
+            }
+            
 
         }
     }
